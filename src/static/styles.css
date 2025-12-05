@@ -74,6 +74,121 @@ section h3 {
   margin-bottom: 8px;
 }
 
+.activity-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.activity-card .participants-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Individual participant look */
+.activity-card .participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  color: #555;
+  font-size: 14px;
+}
+
+.activity-card .participant-item span {
+  flex: 1;
+}
+
+.activity-card .delete-btn {
+  background: none;
+  border: none;
+  color: #c62828;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 4px;
+  margin-left: 8px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.activity-card .delete-btn:hover {
+  color: #d32f2f;
+  transform: scale(1.2);
+}
+
+.activity-card .no-participants {
+  color: #999;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* New: participants container and list */
+.activity-card .participants {
+  margin-top: 12px;
+  padding: 10px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border: 1px solid #eef3ff;
+  border-radius: 6px;
+}
+
+/* Use a compact, scrollable list for many participants */
+.activity-card .participants-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 120px;
+  overflow: auto;
+}
+
+/* Individual participant look: subtle card with avatar dot */
+.activity-card .participants-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #f0f4ff;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Small colored "avatar" dot before each participant */
+.activity-card .participants-list li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1a237e;
+  flex: 0 0 10px;
+  box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.06);
+}
+
+/* Empty-state when no participants are signed up */
+.activity-card .participants-empty {
+  font-style: italic;
+  color: #777;
+  padding: 8px;
+}
+
+/* Optional: nicer scrollbar in WebKit browsers */
+.activity-card .participants-list::-webkit-scrollbar {
+  width: 8px;
+}
+.activity-card .participants-list::-webkit-scrollbar-thumb {
+  background: #d6dffb;
+  border-radius: 8px;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
