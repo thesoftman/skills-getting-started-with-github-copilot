@@ -75,15 +75,57 @@ section h3 {
 }
 
 .activity-card ul {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style: none;
+  padding: 0;
   margin-top: 10px;
 }
 
-/* Replace generic li styling for participant lists with more polished styles */
-.activity-card li {
-  margin-bottom: 5px;
+.activity-card .participants-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Individual participant look */
+.activity-card .participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 4px;
   color: #555;
+  font-size: 14px;
+}
+
+.activity-card .participant-item span {
+  flex: 1;
+}
+
+.activity-card .delete-btn {
+  background: none;
+  border: none;
+  color: #c62828;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 4px;
+  margin-left: 8px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.activity-card .delete-btn:hover {
+  color: #d32f2f;
+  transform: scale(1.2);
+}
+
+.activity-card .no-participants {
+  color: #999;
+  font-style: italic;
+  margin-top: 10px;
 }
 
 /* New: participants container and list */
